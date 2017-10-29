@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSDate *startTouchDate;
 @property (nonatomic, strong) NSTimer *touchTimer;
 
+@property (nonatomic) UIStyle uIStyle;
 @property (nonatomic) ShowMode showMode;
 @property (nonatomic) ShowOptions showOptions;
 @property (nonatomic) RecordState recordState;
@@ -98,7 +99,9 @@
         }
         if (CGRectContainsPoint([self increasedRect:[self showRect]], point))
         {
-            if (([self recordState] == RecordStateRecording) || ([self recordState] == RecordStateRecordingWithMicrophone))
+            if (([self uIStyle] == WebXRAtOnceUI) ||
+                ([self recordState] == RecordStateRecording) ||
+                ([self recordState] == RecordStateRecordingWithMicrophone))
             {
                 return NO;
             }

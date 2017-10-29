@@ -16,6 +16,7 @@
              showRect:(CGRect)showRect
             debugRect:(CGRect)debugRect;
 
+- (void)setUIStyle:(UIStyle)style;
 - (void)setShowMode:(ShowMode)mode;
 - (void)setShowOptions:(ShowOptions)options;
 - (void)setRecordState:(RecordState)state;

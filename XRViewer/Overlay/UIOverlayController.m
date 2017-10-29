@@ -77,6 +77,8 @@
     _style = style;
     
     [[self overlayVC] setUIStyle:style];
+
+    [[self touchView] setUIStyle:style];
 }
 
 - (void)setMode:(ShowMode)mode
